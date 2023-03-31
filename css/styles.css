@@ -292,33 +292,36 @@ background: var(--focus-background-color);
 }
 
 .form{
-  min-width: 360px;
+  min-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;}
+  padding: 0;
+}
 
 .form-text{
-    margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
-    color:var(--header-accent-color);}
+    color:var(--header-accent-color);margin-bottom: 16px;
+}
 
 .form-field{
     display: flex;
     align-items: start;
     flex-direction: column;
     margin-bottom: 8px;
-    position: relative; }
+    position: relative;
+}
 
 .label{
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
     color: var(--label-color);
-    margin-bottom: 4px;}
+    margin-bottom: 4px;
+}
 
 .form-inner{
     border: 1px solid var(--header-accent-color);
@@ -346,29 +349,44 @@ background: var(--focus-background-color);
 
 .form-inner:focus + .form-icon{
     fill: var(--main-accent-color);}
-   
+
+.form-comment {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 16px;
+} 
+
 .comment {
     min-height: 120px;
+    width: 100%;
     border: 1px solid var(--header-accent-color);
     border-radius: 4px;
-    width: 100%;
-    min-height: 40px;
     padding:8px 16px;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+    color: var(--main-title-color);
+}
+
+.comment::placeholder {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
     color: var(--label-color);
-    margin-bottom: 4px;}
+}
 
 .comment:focus {
     border: var(--main-accent-color);
 }
 
-.accept{
+.form-accept{
     flex-direction: row;
     align-items: center;
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--label-color);
 }
 
 .modal-form-checkbox {
@@ -378,7 +396,6 @@ background: var(--focus-background-color);
     width: 16px;
     height: 16px;
     margin-right: 8px;
-    margin-bottom: 4px;
     border: 1px solid var(--hero-background-color);
     border-radius: 2px;
     cursor: pointer;
@@ -405,8 +422,12 @@ background: var(--focus-background-color);
     fill: var(--focus-background-color);
     cursor: pointer;
 }
+.form-accept a {
+    color: var(--main-accent-color);
+}
 
  .form button[type="submit"]{
+    display: block;
     min-width: 169px;
     margin-left: auto;
     margin-right: auto;
@@ -414,9 +435,10 @@ background: var(--focus-background-color);
     text-align: center;
     color: var(--main-background-color);
     background-color: var(--main-accent-color);
-    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
+    cursor: pointer;
     transition-property: background-color;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);  
@@ -809,7 +831,7 @@ margin-bottom: 16px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     width: 100%;
-    height: 100%;
+    min-height: 40px;
     padding: 8px 212px 8px 16px;
     }
 
