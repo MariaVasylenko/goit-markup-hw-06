@@ -324,6 +324,7 @@ background: var(--focus-background-color);
 }
 
 .form-inner{
+    outline: none;
     border: 1px solid var(--header-accent-color);
     border-radius: 4px;
     width: 100%;
@@ -343,7 +344,7 @@ background: var(--focus-background-color);
     transition-timing-function: var(--timing-function);}   
 
 .form-inner:focus {
-    border: var(--main-accent-color); 
+    border-color: var(--main-accent-color); 
 
 }
 
@@ -360,7 +361,8 @@ background: var(--focus-background-color);
 .comment {
     min-height: 120px;
     width: 100%;
-    border: 1px solid var(--header-accent-color);
+    outline: none;
+    border-color: 1px solid var(--header-accent-color);
     border-radius: 4px;
     padding:8px 16px;
     transition-duration: var(--duration);
@@ -372,11 +374,11 @@ background: var(--focus-background-color);
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.04em;
-    color: var(--label-color);
+    border-color: var(--label-color);
 }
 
 .comment:focus {
-    border: var(--main-accent-color);
+    border-color: var(--main-accent-color);
 }
 
 .form-accept{
